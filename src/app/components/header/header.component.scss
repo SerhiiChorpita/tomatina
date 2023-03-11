@@ -1,0 +1,137 @@
+@import "../../shared/styles/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 105px;
+  font-size: 14px;
+}
+.delivery-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: fit-content;
+  padding: 13px 0;
+  background-color: $secondaryColor;
+}
+.clickToChange {
+  cursor: pointer;
+  color: $mainColor;
+  padding-left: 2rem;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.logo {
+  display: block;
+  width: 180px;
+  height: 100%;
+  background-image: url(../../../assets/logo/xtomatina_logo.png.pagespeed.ic.Nv1R27F6Us.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+}
+.nav-main-menu {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: fit-content;
+  padding: 0 2vw;
+  li {
+    margin-left: 45px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    &:hover {
+      cursor: pointer;
+      color: $mainColor;
+    }
+  }
+}
+
+.header-right {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: fit-content;
+  padding: 0 2vw;
+  &__feedback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 60%;
+    padding: 0 30px;
+    background-color: $secondaryColor;
+    border-radius: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: $mainColor;
+    transition: all 0.3s;
+    &:hover {
+      background-color: $mainColor;
+      color: $secondaryColor;
+    }
+  }
+
+  &__favorites {
+    display: block;
+    width: 47px;
+    height: 45px;
+    margin: 10px;
+
+    &__heart {
+      background-image: url(../../../assets/icon/heart-white.svg);
+    }
+    &:hover {
+      path {
+        fill: none;
+      }
+    }
+    .heart-icon {
+      position: absolute;
+      margin-top: 2px;
+      margin-left: 2px;
+      background-image: url("../../../assets/icon/heart-green.svg");
+    }
+  }
+}
+
+path {
+  fill: $mainColor;
+  stroke: $mainColor;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  width: fit-content;
+  height: auto;
+  margin: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  img {
+    margin-right: 10px;
+  }
+  &:hover {
+    color: $mainColor;
+  }
+}
