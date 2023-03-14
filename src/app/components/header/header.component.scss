@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s;
 }
 
 .main-nav {
@@ -12,8 +13,10 @@
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  height: 105px;
+  height: 80px;
   font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0px 2px 4px 0px lightgray;
 }
 .delivery-nav {
   display: flex;
@@ -23,6 +26,12 @@
   height: fit-content;
   padding: 13px 0;
   background-color: $secondaryColor;
+}
+.deliveryType {
+  font-size: 15px;
+}
+.deliveryTypelight {
+  font-family: RobotoLight;
 }
 .clickToChange {
   cursor: pointer;
@@ -35,12 +44,13 @@
 
 .logo {
   display: block;
-  width: 180px;
+  width: 110px;
   height: 100%;
   background-image: url(../../../assets/logo/xtomatina_logo.png.pagespeed.ic.Nv1R27F6Us.png);
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 100%;
   background-position: center;
+  margin-left: 10px;
 }
 .nav-main-menu {
   display: flex;
@@ -67,15 +77,17 @@
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
-  width: fit-content;
+  width: 45vw;
   padding: 0 2vw;
+  transition: all 0.3s;
+
   &__feedback {
     display: flex;
     justify-content: center;
     align-items: center;
     width: fit-content;
     height: 60%;
-    padding: 0 30px;
+    padding: 0 20px;
     background-color: $secondaryColor;
     border-radius: 15px;
     text-transform: uppercase;
@@ -90,13 +102,21 @@
     }
   }
 
-  &__favorites {
+  &__favorites,
+  &__call,
+  &__side-menu-btn {
+    cursor: pointer;
     display: block;
     width: 47px;
     height: 45px;
     margin: 10px;
 
-    &__heart {
+    &__heart,
+    &__phone,
+    &__img {
+      display: block;
+      width: 100%;
+      height: 100%;
       background-image: url(../../../assets/icon/heart-white.svg);
     }
     &:hover {
@@ -104,11 +124,50 @@
         fill: none;
       }
     }
+    .heart-icon,
+    .phone-icon,
+    .bars-icon {
+      position: relative;
+      left: 30%;
+      bottom: 75%;
+      background-repeat: no-repeat;
+      background-size: 110%;
+      background-position: center;
+    }
     .heart-icon {
-      position: absolute;
-      margin-top: 2px;
-      margin-left: 2px;
-      background-image: url("../../../assets/icon/heart-green.svg");
+      background-image: url("../../../assets/icon/heart-white.svg");
+    }
+    .phone-icon {
+      background-image: url("../../../assets/icon/mobile-white.svg");
+    }
+    .bars-icon {
+      background-image: url("../../../assets/icon/bars-white.svg");
+    }
+    &:active {
+      position: relative;
+      top: 2px;
+      left: 0;
+    }
+  }
+  &__favorites {
+    &:hover {
+      .heart-icon {
+        background-image: url("../../../assets/icon/heart-green.svg");
+      }
+    }
+  }
+  &__call {
+    &:hover {
+      .phone-icon {
+        background-image: url("../../../assets/icon/mobile-green.svg");
+      }
+    }
+  }
+  &__side-menu-btn {
+    &:hover {
+      .bars-icon {
+        background-image: url("../../../assets/icon/bars-green.svg");
+      }
     }
   }
 }
@@ -133,5 +192,81 @@ path {
   }
   &:hover {
     color: $mainColor;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .login-btn {
+    font-size: 12px;
+  }
+  .header-right {
+    width: fit-content;
+  }
+  .header-right__feedback {
+    display: none;
+  }
+}
+
+@media all and (max-width: 990px) {
+  .header-right__call {
+    display: none;
+  }
+  .nav-main-menu__page,
+  .nav-main-menu__delivery {
+    display: none;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 990px) {
+  .nav-main-menu {
+    font-size: 12px;
+  }
+  .logo {
+    width: 80px;
+  }
+}
+@media all and (max-width: 768px) {
+  .logo {
+    min-width: 80px;
+    width: 80px;
+  }
+  .nav-main-menu__page {
+    display: flex;
+  }
+}
+@media all and (max-width: 564px) {
+  .main-nav {
+    height: 60px;
+  }
+  .header-right__favorites,
+  .header-right__side-menu-btn {
+    width: 41px;
+    height: 39px;
+  }
+  .heart-icon,
+  .bars-icon {
+    left: 28% !important;
+    bottom: 77% !important;
+  }
+}
+@media all and (max-width: 480px) {
+  .nav-main-menu {
+    font-size: 11px;
+  }
+  .nav-main-menu {
+    li {
+      margin-left: 5px;
+    }
+  }
+  .header-right__favorites,
+  .header-right__side-menu-btn {
+    margin: 0;
+    width: 34px;
+    height: 32px;
+  }
+  .heart-icon,
+  .bars-icon {
+    left: 23% !important;
+    bottom: 81% !important;
   }
 }
