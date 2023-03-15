@@ -190,6 +190,48 @@ path {
       background-image: url("../../../assets/icon/instagram-white.svg");
     }
   }
+  &__block2 {
+    &__cards {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      &__pay-one,
+      &__pay-two {
+        display: flex;
+        width: 65px;
+        height: 40px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        background-repeat: no-repeat;
+        background-position: 60% 50%;
+        background-size: 50%;
+      }
+      &__pay-one {
+        background-image: url("../../../assets/icon/pay_one.svg");
+        margin-right: 10px;
+      }
+      &__pay-two {
+        background-image: url("../../../assets/icon/pay_Two.svg");
+        background-position: 50% 50%;
+      }
+    }
+    &__logos {
+      cursor: pointer;
+      display: block;
+      width: 100px;
+      height: 50px;
+      &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../../assets/icon/logos.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+      }
+    }
+  }
 }
 
 a {
@@ -200,5 +242,6 @@ a {
   }
 }
 .grey {
+  font-family: RobotoLight;
   color: grey;
 }

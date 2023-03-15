@@ -17,3 +17,8 @@
 ::-webkit-scrollbar-thumb {
   background-color: $mainColor;
 }
+
+::selection {
+  color: white;
+  background: black;
+}
