@@ -1,41 +1,65 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary delivery-nav">
-    <div class="deliveryType" >Your delivery type: <span class="deliveryTypelight">{{ deliveryType }}</span></div>
+<div class="sticky-header">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary delivery-nav">
+    <div class="deliveryType">
+      Your delivery type:
+      <span class="deliveryTypelight">{{ deliveryType }}</span>
+    </div>
     <div class="clickToChange">CLICK HERE TO CHANGE</div>
-</nav>
-<nav class="navbar navbar-expand-lg bg-body-tertiary main-nav">
-        <a class="navbar-brand" href="/" class="logo"></a>
-        <ul class="nav-main-menu">
-            <li class="nav-link nav-main-menu__menu">Menu</li>
-            <li class="nav-link nav-main-menu__page">Create your own</li>
-            <li class="nav-link nav-main-menu__delivery">Delivery</li>
-        </ul>
-        <div class="header-right">
-            <a href="/feedback" class="header-right__feedback">leave feedback</a>
-            <div class="header-right__favorites">
-                <svg class="header-right__favorites__heart"  viewBox="0 0 47 45">
-                    <path
-                        d="M45.2083 18.1669L45.2084 18.167C46.7906 22.9887 47.0613 28.4122 45.2187 33.0569C42.3923 40.1815 34.8975 44.3582 27.6059 44.4963C21.8566 44.6044 14.3579 42.3387 8.69888 38.1334C3.05046 33.9361 -0.68529 27.8778 0.845276 20.378C2.16342 13.9239 7.85576 7.82595 13.0413 4.37013C19.7859 -0.122065 26.5525 -0.480618 32.2513 2.14746C37.9685 4.78402 42.6817 10.4605 45.2083 18.1669Z"
-                        ></path>
-                </svg>
-                <svg class="heart-icon" width="20" height="18" viewBox="0 0 20 18" fill="none"></svg>
-            </div>
-            <div class="header-right__call">
-                <svg class="header-right__call__phone"  viewBox="0 0 47 45">
-                    <path
-                        d="M45.2083 18.1669L45.2084 18.167C46.7906 22.9887 47.0613 28.4122 45.2187 33.0569C42.3923 40.1815 34.8975 44.3582 27.6059 44.4963C21.8566 44.6044 14.3579 42.3387 8.69888 38.1334C3.05046 33.9361 -0.68529 27.8778 0.845276 20.378C2.16342 13.9239 7.85576 7.82595 13.0413 4.37013C19.7859 -0.122065 26.5525 -0.480618 32.2513 2.14746C37.9685 4.78402 42.6817 10.4605 45.2083 18.1669Z"
-                        ></path>
-                </svg>
-                <svg class="phone-icon" width="20" height="18" viewBox="0 0 20 18" fill="none"></svg>
-            </div>
-            <a href="/login" class="login-btn">
-                <img src="../../../assets/icon/user-green-icon.svg"> Login</a>
-            <div class="header-right__side-menu-btn">
-                <svg class="header-right__side-menu-btn__img" viewBox="0 0 47 45">
-                    <path
-                        d="M45.2083 18.1669L45.2084 18.167C46.7906 22.9887 47.0613 28.4122 45.2187 33.0569C42.3923 40.1815 34.8975 44.3582 27.6059 44.4963C21.8566 44.6044 14.3579 42.3387 8.69888 38.1334C3.05046 33.9361 -0.68529 27.8778 0.845276 20.378C2.16342 13.9239 7.85576 7.82595 13.0413 4.37013C19.7859 -0.122065 26.5525 -0.480618 32.2513 2.14746C37.9685 4.78402 42.6817 10.4605 45.2083 18.1669Z">
-                    </path>
-                </svg>
-                <svg class="bars-icon" width="20" height="18" viewBox="0 0 20 18" fill="none"></svg>
-            </div>
-        </div>
-</nav>
+  </nav>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary main-nav">
+    <a class="navbar-brand" href="/" class="logo"></a>
+    <ul class="nav-main-menu">
+      <li class="nav-link nav-main-menu__menu">Menu</li>
+      <li class="nav-link nav-main-menu__page">Create your own</li>
+      <li class="nav-link nav-main-menu__delivery">Delivery</li>
+    </ul>
+    <div class="header-right">
+      <a href="/feedback" class="header-right__feedback">leave feedback</a>
+      <div class="header-right__favorites">
+        <svg class="header-right__favorites__heart" viewBox="0 0 47 45">
+          <path
+            d="M45.2083 18.1669L45.2084 18.167C46.7906 22.9887 47.0613 28.4122 45.2187 33.0569C42.3923 40.1815 34.8975 44.3582 27.6059 44.4963C21.8566 44.6044 14.3579 42.3387 8.69888 38.1334C3.05046 33.9361 -0.68529 27.8778 0.845276 20.378C2.16342 13.9239 7.85576 7.82595 13.0413 4.37013C19.7859 -0.122065 26.5525 -0.480618 32.2513 2.14746C37.9685 4.78402 42.6817 10.4605 45.2083 18.1669Z"
+          ></path>
+        </svg>
+        <svg
+          class="heart-icon"
+          width="20"
+          height="18"
+          viewBox="0 0 20 18"
+          fill="none"
+        ></svg>
+      </div>
+      <div class="header-right__call">
+        <svg class="header-right__call__phone" viewBox="0 0 47 45">
+          <path
+            d="M45.2083 18.1669L45.2084 18.167C46.7906 22.9887 47.0613 28.4122 45.2187 33.0569C42.3923 40.1815 34.8975 44.3582 27.6059 44.4963C21.8566 44.6044 14.3579 42.3387 8.69888 38.1334C3.05046 33.9361 -0.68529 27.8778 0.845276 20.378C2.16342 13.9239 7.85576 7.82595 13.0413 4.37013C19.7859 -0.122065 26.5525 -0.480618 32.2513 2.14746C37.9685 4.78402 42.6817 10.4605 45.2083 18.1669Z"
+          ></path>
+        </svg>
+        <svg
+          class="phone-icon"
+          width="20"
+          height="18"
+          viewBox="0 0 20 18"
+          fill="none"
+        ></svg>
+      </div>
+      <a href="/login" class="login-btn">
+        <img src="../../../assets/icon/user-green-icon.svg" /> Login</a
+      >
+      <div class="header-right__side-menu-btn">
+        <svg class="header-right__side-menu-btn__img" viewBox="0 0 47 45">
+          <path
+            d="M45.2083 18.1669L45.2084 18.167C46.7906 22.9887 47.0613 28.4122 45.2187 33.0569C42.3923 40.1815 34.8975 44.3582 27.6059 44.4963C21.8566 44.6044 14.3579 42.3387 8.69888 38.1334C3.05046 33.9361 -0.68529 27.8778 0.845276 20.378C2.16342 13.9239 7.85576 7.82595 13.0413 4.37013C19.7859 -0.122065 26.5525 -0.480618 32.2513 2.14746C37.9685 4.78402 42.6817 10.4605 45.2083 18.1669Z"
+          ></path>
+        </svg>
+        <svg
+          class="bars-icon"
+          width="20"
+          height="18"
+          viewBox="0 0 20 18"
+          fill="none"
+        ></svg>
+      </div>
+    </div>
+  </nav>
+</div>

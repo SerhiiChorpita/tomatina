@@ -1,8 +1,9 @@
 .main-block {
-    display: block;
-    width: 100%;
-    max-width: 1750px;
-    height: max-content;
-    margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 1750px;
+  height: max-content;
+  min-height: 82vh;
+  margin: 0 auto;
   background: red;
 }
