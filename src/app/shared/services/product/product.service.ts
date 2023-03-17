@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { addDoc, collection, collectionData, CollectionReference, deleteDoc, doc, docData, DocumentData, DocumentReference, Firestore, updateDoc } from '@angular/fire/firestore';
-import { IProductResponse } from '../interface/products/products';
+import { IProductResponse } from '../../interface/products/products';
 
 @Injectable({
   providedIn: 'root'

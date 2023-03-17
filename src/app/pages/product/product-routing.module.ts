@@ -7,11 +7,11 @@ import { DessertsComponent } from './desserts/desserts.component';
 import { DrinksComponent } from './drinks/drinks.component';
 import { FitSandwichesComponent } from './fit-sandwiches/fit-sandwiches.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
-import { ProductInfoResolver } from 'src/app/shared/services/product-info.resolver';
 import { SaladPastsComponent } from './salad-pasts/salad-pasts.component';
 import { SaladsComponent } from './salads/salads.component';
 import { SoupsComponent } from './soups/soups.component';
 import { WeeklySpecialComponent } from './weekly-special/weekly-special.component';
+import { ProductInfoResolver } from 'src/app/shared/services/product/product-info.resolver';
 
 const routes: Routes = [
   {

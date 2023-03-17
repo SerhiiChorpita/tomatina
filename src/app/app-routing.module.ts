@@ -17,6 +17,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/delivery-and-payment/delivery-and-payment.module').then(m => m.DeliveryAndPaymentModule)
   },
   {
+    path: 'favorites',
+    loadChildren: () => import('./pages/favorites/favorites.module').then(m => m.FavoritesModule)
+  },
+  {
+    path: 'create-your-own',
+    loadChildren: () => import('./pages/create-your-own/create-your-own.module').then(m => m.CreateYourOwnModule)
+  },
+  {
     path: 'about-us',
     loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
   },

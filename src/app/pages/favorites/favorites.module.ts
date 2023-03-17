@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthorizationComponent } from './authorization.component';
-import { AuthorizationRoutingModule } from './authorization-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { FavoritesRoutingModule } from './favorites-routing.module';
+import { FavoritesComponent } from './favorites.component';
+
+
 
 @NgModule({
   declarations: [
-    AuthorizationComponent
+    FavoritesComponent
   ],
   imports: [
     CommonModule,
-    AuthorizationRoutingModule,
+    FavoritesRoutingModule,
     SharedModule
   ]
 })
-export class AuthorizationModule { }
+export class FavoritesModule { }
