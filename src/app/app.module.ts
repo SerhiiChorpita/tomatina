@@ -30,12 +30,11 @@ import { ToastrModule } from 'ngx-toastr';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-
     VacanciesComponent,
-
-    FeedbackComponent,
     PageNotFoundComponent,
+    FeedbackComponent,
     ContactsComponent,
+
     DeliveryTypeComponent,
     CheckoutBasketComponent,
   ],

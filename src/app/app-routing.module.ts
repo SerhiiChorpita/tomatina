@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactsComponent } from './pages/contacts/contacts.component';
+import { FeedbackComponent } from './pages/feedback/feedback.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { VacanciesComponent } from './pages/vacancies/vacancies.component';
 import { AuthGuard } from './shared/guards/auth/auth.guard';
 
 const routes: Routes = [
@@ -48,6 +52,22 @@ const routes: Routes = [
     path: 'admin',
     canActivate: [AuthGuard],
     loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  },
+  {
+    path: 'vacansies',
+    component: VacanciesComponent
+  },
+  {
+    path: 'feedback',
+    component: FeedbackComponent
+  },
+  {
+    path: 'contacts',
+    component: ContactsComponent
+  },
+  {
+    path: '**', pathMatch: 'full',
+    component: PageNotFoundComponent
   }
 ];
 @NgModule({
