@@ -1,6 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+
+// import { environment } from '../environments/environment';
+import { provideStorage, getStorage } from '@angular/fire/storage';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -37,6 +46,9 @@ import { AdminComponent } from './admin/admin.component';
 import { AdminProductComponent } from './admin/admin-product/admin-product.component';
 import { AdminCategoryComponent } from './admin/admin-category/admin-category.component';
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
+import { SharedModule } from './shared/shared.module';
+import { AuthDialogComponent } from './components/auth-dialog/auth-dialog.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -50,16 +62,9 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
     CheckoutBasketComponent,
     DeliveryAndPaymentComponent,
     HomeComponent,
-    ProductComponent,
-    ProductInfoComponent,
-    BreakfastsComponent,
-    WeeklySpecialComponent,
-    SaladPastsComponent,
-    SaladsComponent,
-    FitSandwichesComponent,
-    SoupsComponent,
-    DessertsComponent,
-    DrinksComponent,
+
+
+
     FavoritesComponent,
     FeedbackComponent,
     CreateYourOwnComponent,
@@ -74,11 +79,19 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
     AdminComponent,
     AdminProductComponent,
     AdminCategoryComponent,
-    AdminOrdersComponent
+    AdminOrdersComponent,
+    AuthDialogComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    // provideFirebaseApp(() => initializeApp(environment.firebase)),
+    // provideStorage(() => getStorage()),
+    // provideFirestore(() => getFirestore()),
+    // provideAuth(() => getAuth()),
+    ToastrModule.forRoot({ positionClass: 'inline' }),
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
