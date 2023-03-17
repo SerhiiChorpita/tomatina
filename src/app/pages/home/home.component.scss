@@ -1,0 +1,39 @@
+@import "../../shared/styles/variables";
+
+.banner {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0 20px 20px 20px;
+  &__img {
+    display: flex;
+    width: calc(100% - 220px);
+    height: 440px;
+    background-image: url(../../../assets/logo/weekly-special.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    &__try-it {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 120px;
+      height: 60px;
+      position: relative;
+      left: 5%;
+      top: 40%;
+      border-radius: 5px;
+      border: 2px solid $mainColor;
+      background-color: $mainColor;
+      color: white;
+      transition: all 0.3s;
+      &:hover {
+        color: $mainColor;
+        background-color: white;
+      }
+    }
+  }
+}

@@ -17,6 +17,7 @@
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 99;
 }
 .main-nav {
   display: flex;
@@ -29,6 +30,7 @@
   font-weight: 500;
   box-shadow: 0px 2px 4px 0px lightgray;
   background-color: white;
+  z-index: 99;
 }
 .delivery-nav {
   display: flex;

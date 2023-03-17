@@ -16,7 +16,19 @@ import { ProductInfoResolver } from 'src/app/shared/services/product/product-inf
 const routes: Routes = [
   {
     path: '',
-    component: ProductComponent
+    component: ProductComponent,
+    children: [
+      { path: 'breakfasts', component: BreakfastsComponent },
+      { path: 'desserts', component: DessertsComponent },
+      { path: 'drinks', component: DrinksComponent },
+      { path: 'fit-sandwiches', component: FitSandwichesComponent },
+      { path: 'salad-pasts', component: SaladPastsComponent },
+      { path: 'salads', component: SaladPastsComponent },
+      { path: 'salads', component: SaladsComponent },
+      { path: 'soups', component: SoupsComponent },
+      { path: 'weekly-special', component: WeeklySpecialComponent },
+      { path: '', pathMatch: 'full', redirectTo: 'breakfasts' }
+    ]
   },
   {
     path: 'breakfasts',
