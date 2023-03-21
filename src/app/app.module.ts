@@ -14,8 +14,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { AboutUsComponent } from './pages/about-us/about-us.component';
-import { AddressComponent } from './pages/address/address.component';
 import { CheckoutBasketComponent } from './pages/checkout-basket/checkout-basket.component';
 import { FeedbackComponent } from './pages/feedback/feedback.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
@@ -24,6 +22,7 @@ import { ContactsComponent } from './pages/contacts/contacts.component';
 import { DeliveryTypeComponent } from './pages/delivery-type/delivery-type.component';
 import { SharedModule } from './shared/shared.module';
 import { ToastrModule } from 'ngx-toastr';
+import { AddIngredientsComponent } from './pages/add-ingredients/add-ingredients.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +36,7 @@ import { ToastrModule } from 'ngx-toastr';
 
     DeliveryTypeComponent,
     CheckoutBasketComponent,
+    AddIngredientsComponent,
   ],
   imports: [
     BrowserModule,

@@ -12,13 +12,15 @@ path {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: start;
+  width: 100%;
+  height: fit-content;
   &__block1,
   &__block2 {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: start;
-    width: 100vw;
+    width: 100%;
     height: auto;
     padding: 15px;
   }
@@ -244,4 +246,58 @@ a {
 .grey {
   font-family: RobotoLight;
   color: grey;
+}
+
+@media all and (max-width: 1200px) {
+  .footer__block1 {
+    flex-flow: row wrap;
+    &__vacancies,
+    &__contract-offer {
+      width: 50%;
+      height: 20%;
+      padding-bottom: 20px;
+    }
+    &__contract-offer {
+      text-align: end;
+    }
+    &__address,
+    &__ph-hr,
+    &__follow-us {
+      width: 30%;
+      height: 80%;
+    }
+  }
+}
+
+@media all and (max-width: 988px) {
+  .footer__block1 {
+    flex-flow: row wrap;
+    &__vacancies,
+    &__contract-offer {
+      width: 50%;
+      height: 20%;
+      padding-bottom: 20px;
+      text-align: start;
+    }
+    &__address,
+    &__ph-hr {
+      width: 50%;
+      height: 60%;
+    }
+    &__follow-us {
+      padding: 20px 0;
+      width: 100%;
+      height: 20%;
+      justify-content: center;
+    }
+  }
+}
+@media all and (max-width: 574px) {
+  .footer__block1 {
+    &__address,
+    &__ph-hr {
+      width: 100%;
+      height: 30%;
+    }
+  }
 }
