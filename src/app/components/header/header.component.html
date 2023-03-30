@@ -11,7 +11,12 @@
     <ul class="nav-main-menu">
       <li class="nav-link nav-main-menu__menu">Menu</li>
       <li class="nav-link nav-main-menu__page">Create your own</li>
-      <li class="nav-link nav-main-menu__delivery">Delivery</li>
+      <li
+        class="nav-link nav-main-menu__delivery"
+        [routerLink]="['/delivery-and-payment']"
+      >
+        Delivery
+      </li>
     </ul>
     <div class="header-right">
       <a href="/feedback" class="header-right__feedback">leave feedback</a>

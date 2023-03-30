@@ -1,6 +1,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "app/shared/styles/fonts";
 @import "app/shared/styles/variables";
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 * {
   font-family: sans-serif;

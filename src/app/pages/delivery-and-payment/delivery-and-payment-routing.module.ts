@@ -5,7 +5,7 @@ import { DeliveryAndPaymentComponent } from './delivery-and-payment.component';
 
 const routes: Routes = [
   {
-    path: 'delivery-and-payment',
+    path: '',
     component: DeliveryAndPaymentComponent
   }
 ]
