@@ -15,7 +15,7 @@
     background-image: url(../../../assets/logo/weekly-special.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: cover;
     &__try-it {
       display: flex;
       justify-content: center;
@@ -34,6 +34,25 @@
         color: $mainColor;
         background-color: white;
       }
+    }
+  }
+}
+
+@media all and (max-width: 780px) {
+  .banner {
+    &__img {
+      background-image: url(../../../assets/logo/ws_site_mobile_under_760.jpg);
+      width: 510px;
+      height: 440px;
+    }
+  }
+}
+@media all and (max-width: 550px) {
+  .banner {
+    &__img {
+      background-image: url(../../../assets/logo/ws_site_mobile_under_760.jpg);
+      width: 100%;
+      background-size: contain;
     }
   }
 }

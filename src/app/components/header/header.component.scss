@@ -157,6 +157,9 @@
     .bars-icon {
       background-image: url("../../../assets/icon/bars-white.svg");
     }
+  }
+  &__favorites,
+  &__side-menu-btn {
     &:active {
       position: relative;
       top: 2px;
@@ -177,10 +180,48 @@
       }
     }
   }
+
   &__side-menu-btn {
     &:hover {
       .bars-icon {
         background-image: url("../../../assets/icon/bars-green.svg");
+      }
+    }
+  }
+}
+.mobile-info {
+  visibility: hidden;
+  opacity: 0;
+  display: block;
+  width: 200px;
+  height: fit-content;
+  text-align: center;
+  padding: 10px;
+  background-color: $secondaryColor;
+  border-radius: 5px;
+  position: absolute;
+  top: 110px;
+  right: 190px;
+  z-index: 101;
+  &:before {
+    content: "";
+    position: relative;
+    left: 0;
+    bottom: 42px;
+    width: 0;
+    height: 0;
+    border-bottom: 22px solid $secondaryColor;
+    border-right: 19px solid transparent;
+    border-left: 20px solid transparent;
+  }
+}
+.header-right {
+  &__call {
+    &:hover {
+      .mobile-info {
+        opacity: 1;
+        visibility: visible;
+        top: 100px;
       }
     }
   }

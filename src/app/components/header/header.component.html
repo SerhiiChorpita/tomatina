@@ -9,7 +9,7 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary main-nav">
     <a class="navbar-brand" href="/" class="logo"></a>
     <ul class="nav-main-menu">
-      <li class="nav-link nav-main-menu__menu">Menu</li>
+      <li class="nav-link nav-main-menu__menu" (click)="openDialog()">Menu</li>
       <li class="nav-link nav-main-menu__page">Create your own</li>
       <li
         class="nav-link nav-main-menu__delivery"
@@ -35,6 +35,13 @@
         ></svg>
       </div>
       <div class="header-right__call">
+        <div class="mobile-info">
+          <p><strong>+38 (067) 792 90 90</strong></p>
+          <span
+            >We work Пн - Нд from <strong>09:00</strong> to
+            <strong>22:00</strong></span
+          >
+        </div>
         <svg class="header-right__call__phone" viewBox="0 0 47 45">
           <path
             d="M45.2083 18.1669L45.2084 18.167C46.7906 22.9887 47.0613 28.4122 45.2187 33.0569C42.3923 40.1815 34.8975 44.3582 27.6059 44.4963C21.8566 44.6044 14.3579 42.3387 8.69888 38.1334C3.05046 33.9361 -0.68529 27.8778 0.845276 20.378C2.16342 13.9239 7.85576 7.82595 13.0413 4.37013C19.7859 -0.122065 26.5525 -0.480618 32.2513 2.14746C37.9685 4.78402 42.6817 10.4605 45.2083 18.1669Z"

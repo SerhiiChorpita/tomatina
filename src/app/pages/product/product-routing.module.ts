@@ -18,49 +18,17 @@ const routes: Routes = [
     path: '',
     component: ProductComponent,
     children: [
+      { path: '', redirectTo: 'breakfasts', pathMatch: 'full' },
       { path: 'breakfasts', component: BreakfastsComponent },
       { path: 'desserts', component: DessertsComponent },
       { path: 'drinks', component: DrinksComponent },
       { path: 'fit-sandwiches', component: FitSandwichesComponent },
       { path: 'salad-pasts', component: SaladPastsComponent },
-      { path: 'salads', component: SaladPastsComponent },
+      { path: 'salads', component: SaladsComponent },
       { path: 'salads', component: SaladsComponent },
       { path: 'soups', component: SoupsComponent },
-      { path: 'weekly-special', component: WeeklySpecialComponent },
-      { path: '', pathMatch: 'full', redirectTo: 'breakfasts' }
+      { path: 'weekly-special', component: WeeklySpecialComponent }
     ]
-  },
-  {
-    path: 'breakfasts',
-    component: BreakfastsComponent
-  },
-  {
-    path: 'desserts',
-    component: DessertsComponent
-  },
-  {
-    path: 'drinks',
-    component: DrinksComponent
-  },
-  {
-    path: 'fit-sandwiches',
-    component: FitSandwichesComponent
-  },
-  {
-    path: 'salad-pasts',
-    component: SaladPastsComponent
-  },
-  {
-    path: 'salads',
-    component: SaladsComponent
-  },
-  {
-    path: 'soups',
-    component: SoupsComponent
-  },
-  {
-    path: 'weekly-special',
-    component: WeeklySpecialComponent
   },
   {
     path: ':id',

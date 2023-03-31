@@ -23,6 +23,7 @@ import { DeliveryTypeComponent } from './pages/delivery-type/delivery-type.compo
 import { SharedModule } from './shared/shared.module';
 import { ToastrModule } from 'ngx-toastr';
 import { AddIngredientsComponent } from './pages/add-ingredients/add-ingredients.component';
+import { DialogDataComponent } from './components/header/dialog-data/dialog-data.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AddIngredientsComponent } from './pages/add-ingredients/add-ingredients
     DeliveryTypeComponent,
     CheckoutBasketComponent,
     AddIngredientsComponent,
+    DialogDataComponent,
   ],
   imports: [
     BrowserModule,

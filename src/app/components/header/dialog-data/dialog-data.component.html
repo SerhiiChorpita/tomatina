@@ -1,0 +1,50 @@
+<div mat-dialog-content class="main-container">
+  <div
+    class="box1"
+    [routerLink]="['product/weekly-special']"
+    (click)="closeDialog()"
+  >
+    <div class="box1__img"></div>
+    <div class="box1__text">WEEKLY SPECIAL</div>
+  </div>
+  <div
+    class="box2"
+    [routerLink]="['product/breakfasts']"
+    (click)="closeDialog()"
+  >
+    <div class="box2__img"></div>
+    <div class="box2__text">BREAKFASTS UNTIL 18:00</div>
+  </div>
+  <div
+    class="box3"
+    [routerLink]="['product/salad-pasts']"
+    (click)="closeDialog()"
+  >
+    <div class="box3__img"></div>
+    <div class="box3__text">SALAD PASTS</div>
+  </div>
+  <div class="box4" [routerLink]="['product/salads']" (click)="closeDialog()">
+    <div class="box4__img"></div>
+    <div class="box4__text">SALADS</div>
+  </div>
+  <div
+    class="box5"
+    [routerLink]="['product/fit-sandwiches']"
+    (click)="closeDialog()"
+  >
+    <div class="box5__img"></div>
+    <div class="box5__text">FIT SANDWICHES</div>
+  </div>
+  <div class="box6" [routerLink]="['product/soups']" (click)="closeDialog()">
+    <div class="box6__img"></div>
+    <div class="box6__text">SOUPS</div>
+  </div>
+  <div class="box7" [routerLink]="['product/desserts']" (click)="closeDialog()">
+    <div class="box7__img"></div>
+    <div class="box7__text">DESSERTS</div>
+  </div>
+  <div class="box8" [routerLink]="['product/drinks']" (click)="closeDialog()">
+    <div class="box8__img"></div>
+    <div class="box8__text">DRINKS</div>
+  </div>
+</div>
