@@ -5,6 +5,7 @@
   font-size: 38px;
   font-weight: bold;
   text-align: center;
+  padding-top: 20px;
   span {
     color: $mainColor;
   }
@@ -75,6 +76,70 @@
     background-position: center;
   }
 }
+.second-block {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  &__block-1 {
+    display: block;
+  }
+  &__block-2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 100px;
+    &__box1,
+    &__box2,
+    &__box3 {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      min-width: 430px;
+      width: 30%;
+      height: fit-content;
+      &__img {
+        display: block;
+        width: 75px;
+        height: 53px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+      }
+      &__text {
+        display: block;
+        width: 70%;
+        p {
+          font-weight: bold;
+          font-size: 20px;
+        }
+      }
+    }
+    &__box1 {
+      &__img {
+        background-image: url(../../../assets/secondary_image/pay_page_one.svg);
+      }
+    }
+    &__box2 {
+      &__img {
+        background-image: url(../../../assets/secondary_image/pay_page_two.svg);
+        background-size: 80%;
+      }
+    }
+    &__box3 {
+      &__img {
+        background-image: url(../../../assets/secondary_image/pay_page_tree.svg);
+        background-size: 80%;
+      }
+    }
+  }
+}
 .green {
   color: $green;
 }
@@ -83,4 +148,34 @@
 }
 .red {
   color: $red;
+}
+
+@media all and (max-width: 1200px) {
+  .main-block {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    &__block_1 {
+      width: 100%;
+      &__green-zone,
+      &__yellow-zone,
+      &__red-zone {
+        width: 60%;
+        margin: 20px;
+      }
+    }
+    &__block_2 {
+      width: 100%;
+    }
+  }
+  .second-block {
+    &__block_2 {
+      &__box1,
+      &__box2,
+      &__box3 {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+      }
+    }
+  }
 }
