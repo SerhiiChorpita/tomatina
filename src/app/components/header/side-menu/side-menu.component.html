@@ -1,0 +1,40 @@
+<div mat-dialog-content class="main-container">
+  <div class="side-block">
+    <button class="close-btn" (click)="closeDialog()">✖</button>
+    <button
+      class="btn box1"
+      [routerLink]="['/about-us']"
+      (click)="closeDialog()"
+    >
+      ABOUT TOMATINA
+    </button>
+    <button
+      class="btn box2"
+      [routerLink]="['/create-your-own']"
+      (click)="closeDialog()"
+    >
+      CREATE YOUR OWN
+    </button>
+    <button
+      class="btn box3"
+      [routerLink]="['/delivery-and-payment']"
+      (click)="closeDialog()"
+    >
+      DELIVERY
+    </button>
+    <button
+      class="btn box4"
+      [routerLink]="['/vacansies']"
+      (click)="closeDialog()"
+    >
+      VACANCIES
+    </button>
+    <button
+      class="btn box5"
+      [routerLink]="['/contacts']"
+      (click)="closeDialog()"
+    >
+      CONTACTS
+    </button>
+  </div>
+</div>

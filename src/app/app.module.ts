@@ -24,7 +24,7 @@ import { SharedModule } from './shared/shared.module';
 import { ToastrModule } from 'ngx-toastr';
 import { AddIngredientsComponent } from './pages/add-ingredients/add-ingredients.component';
 import { DialogDataComponent } from './components/header/dialog-data/dialog-data.component';
-import { SideMenuComponent } from './pages/side-menu/side-menu.component';
+import { SideMenuComponent } from './components/header/side-menu/side-menu.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +35,6 @@ import { SideMenuComponent } from './pages/side-menu/side-menu.component';
     PageNotFoundComponent,
     FeedbackComponent,
     ContactsComponent,
-
     DeliveryTypeComponent,
     CheckoutBasketComponent,
     AddIngredientsComponent,

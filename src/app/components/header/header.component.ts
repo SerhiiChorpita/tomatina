@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogDataComponent } from './dialog-data/dialog-data.component';
+import { SideMenuComponent } from './side-menu/side-menu.component';
 
 @Component({
   selector: 'app-header',
@@ -12,9 +13,21 @@ export class HeaderComponent {
 
   constructor(public dialog: MatDialog) { }
 
-  openDialog() {
+  openDialogData() {
     this.dialog.open(DialogDataComponent, {
-      backdropClass: 'cdk-overlay-transparent-backdrop'
+      backdropClass: 'cdk-overlay-transparent-backdrop',
+      autoFocus: false
+    });
+  }
+  openSideMenu() {
+    this.dialog.open(SideMenuComponent, {
+      backdropClass: 'dialog-back',
+      panelClass: 'side-dialog',
+      autoFocus: false,
+      position: {
+        top: '0px',
+        right: '0px'
+      }
     });
   }
   closeDialog() {
