@@ -1,0 +1,19 @@
+<div class="main-block">
+  <div class="text">
+    Glad to see you
+    <span class="green"
+      >Please choose the way you want to receive your order</span
+    >
+  </div>
+  <div class="choose">
+    <div class="choose__one" (click)="closeDialog(true)">
+      <div class="choose__one__img"></div>
+      <div class="choose__one__text">DELIVERY BY COURIER</div>
+    </div>
+    <div class="choose__or">or</div>
+    <div class="choose__two" (click)="closeDialog(false)">
+      <div class="choose__two__img"></div>
+      <div class="choose__two__text">SELF-PICKUP</div>
+    </div>
+  </div>
+</div>

@@ -7,7 +7,7 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 
-// import { environment } from '../environments/environment';
+import { environment } from '../environments/environment';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -45,10 +45,10 @@ import { SideMenuComponent } from './components/header/side-menu/side-menu.compo
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    // provideFirebaseApp(() => initializeApp(environment.firebase)),
-    // provideStorage(() => getStorage()),
-    // provideFirestore(() => getFirestore()),
-    // provideAuth(() => getAuth()),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage()),
+    provideFirestore(() => getFirestore()),
+    provideAuth(() => getAuth()),
     ToastrModule.forRoot({ positionClass: 'inline' }),
     SharedModule
   ],

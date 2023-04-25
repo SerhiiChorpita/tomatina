@@ -5,6 +5,7 @@ import { FeedbackComponent } from './pages/feedback/feedback.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { VacanciesComponent } from './pages/vacancies/vacancies.component';
 import { AuthGuard } from './shared/guards/auth/auth.guard';
+import { AuthDialogComponent } from './components/auth-dialog/auth-dialog.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },

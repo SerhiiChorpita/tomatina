@@ -4,7 +4,14 @@
       Your delivery type:
       <span class="deliveryTypelight">{{ deliveryType }}</span>
     </div>
-    <div class="clickToChange">CLICK HERE TO CHANGE</div>
+    <div
+      #divClick
+      id="divClick"
+      class="clickToChange"
+      (click)="openDeliveryType()"
+    >
+      CLICK HERE TO CHANGE
+    </div>
   </nav>
   <nav class="navbar navbar-expand-lg bg-body-tertiary main-nav">
     <a class="navbar-brand" href="/" class="logo"></a>
@@ -57,9 +64,10 @@
           fill="none"
         ></svg>
       </div>
-      <a href="/login" class="login-btn">
-        <img src="../../../assets/icon/user-green-icon.svg" /> Login</a
-      >
+      <div class="login-btn" (click)="openLoginDialog()">
+        <img src="../../../assets/icon/user-green-icon.svg" />
+        Login
+      </div>
       <div class="header-right__side-menu-btn" (click)="openSideMenu()">
         <svg class="header-right__side-menu-btn__img" viewBox="0 0 47 45">
           <path
