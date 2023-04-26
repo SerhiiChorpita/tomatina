@@ -3,8 +3,8 @@
 .main-block {
   display: block;
   width: 500px;
-  height: 500px;
-  padding: 10px;
+  height: fit-content;
+  padding: 20px;
 }
 form {
   width: 100%;
@@ -15,7 +15,7 @@ form {
 }
 
 .form-group {
-  .mat-form-field {
+  mat-form-field {
     width: 100%;
   }
 }
@@ -59,9 +59,11 @@ form {
   text-decoration: none;
   color: $mainColor;
 }
+
 a {
   cursor: pointer;
 }
+
 mat-mdc-raised-button:not(:disabled) {
   background-color: $mainColor;
 }
