@@ -3,7 +3,7 @@
     <a (click)="onNoClick()">✖</a>
   </div>
   <div class="text-center header">
-    <h3>{{ !isLogin ? "Вхід в кабінет" : "Зареєструватись" }}</h3>
+    <h3>{{ !isLogin ? "Sign in" : "Sign up" }}</h3>
   </div>
   <ng-container *ngIf="!isLogin">
     <form
@@ -12,13 +12,13 @@
     >
       <div class="col-10 form-group">
         <mat-form-field appearance="outline" color="primary">
-          <mat-label>Ваш email</mat-label>
+          <mat-label>email</mat-label>
           <input matInput type="email" formControlName="email" />
         </mat-form-field>
       </div>
       <div class="col-10 form-group">
         <mat-form-field appearance="outline" color="primary">
-          <mat-label>Пароль</mat-label>
+          <mat-label>password</mat-label>
           <input
             matInput
             type="password"
@@ -34,7 +34,7 @@
         color="primary"
         type="submit"
       >
-        УВІЙТИ В КАБІНЕТ
+        LOGIN
       </button>
       <button
         class="col-10 btn-submit mb-2"
@@ -43,10 +43,10 @@
         color="primary"
         type="submit"
       >
-        ЗАРЕЄСТРУВАТИСЬ
+        SIGN UP
       </button>
       <a class="txt2" (click)="changeIsLogin()">
-        {{ !isLogin ? "Зареєструватись" : "Вже зареєстровані? Увійти" }}</a
+        {{ !isLogin ? "Sign up" : "Already registered? Sign in" }}</a
       >
     </form>
   </ng-container>
@@ -60,7 +60,7 @@
             appearance="outline"
             color="primary"
           >
-            <mat-label>Ваше ім'я</mat-label>
+            <mat-label>First name</mat-label>
             <input matInput type="text" formControlName="firstName" />
           </mat-form-field>
         </div>
@@ -70,14 +70,14 @@
             appearance="outline"
             color="primary"
           >
-            <mat-label>Ваше прізвище</mat-label>
+            <mat-label>Last name</mat-label>
             <input matInput type="text" formControlName="lastName" />
           </mat-form-field>
         </div>
       </div>
       <div class="form-group col-10">
         <mat-form-field appearance="outline" color="primary">
-          <mat-label>Ваш телефон</mat-label>
+          <mat-label>Phone number</mat-label>
           <input
             matInput
             type="tel"
@@ -88,7 +88,7 @@
       </div>
       <div class="form-group col-10">
         <mat-form-field appearance="outline" color="primary">
-          <mat-label>Ваш email</mat-label>
+          <mat-label>Email</mat-label>
           <input
             matInput
             type="email"
@@ -104,7 +104,7 @@
             appearance="outline"
             color="primary"
           >
-            <mat-label>Ваш пароль</mat-label>
+            <mat-label>Password</mat-label>
             <input
               matInput
               type="password"
@@ -119,7 +119,7 @@
             appearance="outline"
             color="primary"
           >
-            <mat-label>Повторіть пароль</mat-label>
+            <mat-label>Repeat password</mat-label>
             <input
               matInput
               type="password"
@@ -142,7 +142,7 @@
         type="button"
         (click)="loginUser()"
       >
-        УВІЙТИ В КАБІНЕТ
+        LOGIN
       </button>
       <button
         class="col-10 btn-submit mb-2"
@@ -153,10 +153,10 @@
         (click)="registerUser()"
         [disabled]="!registrForm.valid"
       >
-        ЗАРЕЄСТРУВАТИСЬ
+        SIGN UP
       </button>
       <a class="txt2" (click)="changeIsLogin()">
-        {{ !isLogin ? "Зареєструватись" : "Вже зареєстровані? Увійти" }}</a
+        {{ !isLogin ? "Sign up" : "Already registered? Sign in" }}</a
       >
     </form>
   </ng-container>

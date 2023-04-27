@@ -27,7 +27,7 @@
     "firebase": "^9.20.0",
     "generator-ngbp-module": "^0.2.9",
     "http-client": "^4.3.1",
-    "ngx-toastr": "^16.1.0",
+    "ngx-toastr": "^16.1.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"

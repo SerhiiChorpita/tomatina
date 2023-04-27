@@ -25,6 +25,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AddIngredientsComponent } from './pages/add-ingredients/add-ingredients.component';
 import { DialogDataComponent } from './components/header/dialog-data/dialog-data.component';
 import { SideMenuComponent } from './components/header/side-menu/side-menu.component';
+import { AuthDialogComponent } from './components/auth-dialog/auth-dialog.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { SideMenuComponent } from './components/header/side-menu/side-menu.compo
     AddIngredientsComponent,
     DialogDataComponent,
     SideMenuComponent,
+    AuthDialogComponent
   ],
   imports: [
     BrowserModule,

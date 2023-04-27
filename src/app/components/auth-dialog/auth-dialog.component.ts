@@ -14,8 +14,6 @@ import { AccountService } from 'src/app/shared/services/account/account.service'
   styleUrls: ['./auth-dialog.component.scss']
 })
 export class AuthDialogComponent implements OnInit {
-
-
   public authForm!: FormGroup;
   public registrForm!: FormGroup;
   public isLogin = false;
