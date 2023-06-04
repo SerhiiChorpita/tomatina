@@ -1,1 +1,36 @@
-<p>breakfasts works!</p>
+<div class="container main-container">
+  <ng-container *ngIf="productStorage">
+    <div *ngFor="let product of productStorage; index as i">
+      <div class="roll-product m-2">
+        <div class="roll-product__img">
+          <img
+            [routerLink]="['/product/' + product.category.path, product.id]"
+            [src]="product.imagePath"
+          />
+          <button class="quickOrder" (click)="addToBasket(productStorage[i])">
+            QUICK ORDER
+          </button>
+          <div class="favorite"></div>
+        </div>
+        <div
+          class="roll-product__name"
+          [routerLink]="['/product/' + product.category.path, product.id]"
+        >
+          <div class="roll-product__name__pName">
+            <span>{{ product.name }}</span>
+          </div>
+          <div class="roll-product__name__price">
+            $<strong
+              ><span>{{ product.price * product.count }}</span>
+            </strong>
+          </div>
+        </div>
+        <div class="roll-product__weight">
+          <div class="roll-product__weight__1">
+            <span>{{ product.ingredients }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

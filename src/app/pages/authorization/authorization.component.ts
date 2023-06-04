@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./authorization.component.scss']
 })
 export class AuthorizationComponent {
-
 }
