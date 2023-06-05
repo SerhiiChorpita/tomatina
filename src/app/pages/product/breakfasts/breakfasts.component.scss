@@ -106,6 +106,10 @@ header {
         width: 110%;
         height: auto;
       }
+      .quickOrder {
+        opacity: 1;
+        bottom: 3%;
+      }
     }
   }
   &__img {
@@ -228,10 +232,11 @@ header {
 }
 .quickOrder {
   display: block;
+  opacity: 0;
   width: 150px;
   height: auto;
-  top: 0;
-  right: 0;
+  bottom: -15%;
+  right: auto;
   position: absolute;
   border: none;
   background-color: $secondaryColor;
@@ -245,6 +250,7 @@ header {
   }
 }
 .favorite {
+  cursor: pointer;
   display: block;
   width: 20px;
   height: 20px;
