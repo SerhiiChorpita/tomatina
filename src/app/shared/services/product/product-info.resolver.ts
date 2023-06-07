@@ -5,12 +5,18 @@ import {
   ActivatedRouteSnapshot
 } from '@angular/router';
 import { Observable, of } from 'rxjs';
+import { IProductResponse } from '../../interface/products/products';
+import { ProductService } from './product.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProductInfoResolver implements Resolve<boolean> {
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
-    return of(true);
+
+export class ProductInfoResolver implements Resolve<IProductResponse> {
+
+  constructor(private productService: ProductService) { }
+
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<any> {
+    return this.productService.getOneFirebase(String(route.paramMap.get('id')))
   }
 }

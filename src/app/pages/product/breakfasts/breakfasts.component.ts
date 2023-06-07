@@ -26,7 +26,8 @@ export class BreakfastsComponent {
   ) { }
 
   ngOnInit(): void {
-    this.loadProduct()
+    this.loadProduct();
+    this.scrollToTop();
   }
 
   loadProduct() {
@@ -69,5 +70,12 @@ export class BreakfastsComponent {
     this.select5 = false;
     this.select6 = false;
     this.select7 = false;
+  }
+  scrollToTop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }
 }

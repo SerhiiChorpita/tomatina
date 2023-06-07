@@ -5,7 +5,7 @@ export interface IProductRequest {
     path: ICategoryResponse,
     name: string,
     ingredients: string,
-    weight: number,
+    nutritionalValue: number,
     price: number,
     imagePath: string,
     count: number

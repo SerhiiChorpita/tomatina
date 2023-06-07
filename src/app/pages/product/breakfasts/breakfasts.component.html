@@ -4,7 +4,7 @@
       <div class="roll-product m-2">
         <div class="roll-product__img">
           <img
-            [routerLink]="['/product/' + product.category.path, product.id]"
+            [routerLink]="['/product/' + product.id]"
             [src]="product.imagePath"
           />
           <button class="quickOrder" (click)="addToBasket(productStorage[i])">
