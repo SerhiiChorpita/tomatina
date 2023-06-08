@@ -64,9 +64,39 @@
           fill="none"
         ></svg>
       </div>
-      <div class="login-btn" (click)="openLoginDialog()">
-        <img src="../../../assets/icon/user-green-icon.svg" />
-        Login
+      <div class="login-btn">
+        <ng-container *ngIf="!loginAdminCheck && !loginUserCheck">
+          <img src="../../../assets/icon/user-green-icon.svg" />
+          <button
+            type="button"
+            class="btn admin-office"
+            (click)="openLoginDialog()"
+          >
+            Login
+          </button>
+        </ng-container>
+        <ng-container *ngIf="loginAdminCheck && !loginUserCheck">
+          <img src="../../../assets/icon/user-green-icon.svg" />
+          <button
+            type="button"
+            class="btn admin-office"
+            [routerLink]="'/admin'"
+            style="line-height: 1px"
+          >
+            *
+          </button>
+        </ng-container>
+        <ng-container *ngIf="loginUserCheck && !loginAdminCheck">
+          <img src="../../../assets/icon/user-green-icon.svg" />
+          <button
+            type="button"
+            class="btn admin-office"
+            [routerLink]="'/account'"
+            style="line-height: 1px"
+          >
+            {{ userNameLogin }}
+          </button>
+        </ng-container>
       </div>
       <div class="header-right__side-menu-btn" (click)="openSideMenu()">
         <svg class="header-right__side-menu-btn__img" viewBox="0 0 47 45">

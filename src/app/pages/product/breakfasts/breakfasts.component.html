@@ -14,7 +14,7 @@
         </div>
         <div
           class="roll-product__name"
-          [routerLink]="['/product/' + product.category.path, product.id]"
+          [routerLink]="['/product/' + product.id]"
         >
           <div class="roll-product__name__pName">
             <span>{{ product.name }}</span>
@@ -28,6 +28,31 @@
         <div class="roll-product__weight">
           <div class="roll-product__weight__1">
             <span>{{ product.ingredients }}</span>
+          </div>
+        </div>
+        <div class="roll-product__order">
+          <div class="roll-product__order__2">
+            <button
+              (click)="productCount(productStorage[i], false)"
+              class="decrement"
+            >
+              -
+            </button>
+            <input
+              [value]="product.count"
+              type="text"
+              readonly
+              class="product-qty"
+            />
+            <button
+              (click)="productCount(productStorage[i], true)"
+              class="increment"
+            >
+              +
+            </button>
+          </div>
+          <div class="roll-product__order__3">
+            <button (click)="addToBasket(productStorage[i])">ORDER</button>
           </div>
         </div>
       </div>

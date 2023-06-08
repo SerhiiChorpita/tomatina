@@ -151,7 +151,7 @@ header {
 
     &__price {
       display: block;
-      width: 10%;
+      width: fit-content;
       height: auto;
     }
   }
@@ -193,7 +193,6 @@ header {
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-evenly;
-      border: 1px solid lightgrey;
       border-radius: 15px;
       width: 40%;
       input {
@@ -205,12 +204,20 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: $secondaryColor;
         width: 25%;
         height: 80%;
         font-size: 26px;
+        border-radius: 5px;
+        transition: all 0.35s;
         &:hover {
-          border-radius: 15px;
           background-color: $mainColor;
+          color: white;
+        }
+        &:active {
+          position: relative;
+          top: 2px;
+          left: 0;
         }
       }
     }
@@ -226,6 +233,12 @@ header {
       &:hover {
         border: 2px solid $mainColor;
         background: none;
+      }
+      button {
+        color: white;
+        &:hover {
+          color: black;
+        }
       }
     }
   }

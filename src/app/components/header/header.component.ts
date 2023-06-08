@@ -4,6 +4,9 @@ import { DialogDataComponent } from './dialog-data/dialog-data.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { DeliveryTypeComponent } from './delivery-type/delivery-type.component';
 import { AuthDialogComponent } from '../auth-dialog/auth-dialog.component';
+import { ROLE } from 'src/app/shared/constants/role.constant';
+import { AccountService } from 'src/app/shared/services/account/account.service';
+import { getAuth } from "firebase/auth";
 
 @Component({
   selector: 'app-header',
@@ -14,13 +17,38 @@ export class HeaderComponent {
   @ViewChild('divClick') divClick!: ElementRef<HTMLElement>;
   public deliveryType: string = '';
 
+  public loginAdminCheck!: boolean;
+  public loginUserCheck!: boolean;
+  public userNameLogin!: string;
+
   constructor(
     public dialog: MatDialog,
+    private accountService: AccountService,
   ) { }
 
   ngOnInit(): void {
     this.checkDelivery();
+    this.checkLogin();
+    this.accountService.isUserLogin$.subscribe(() => {
+      this.checkLogin();
+    })
   }
+
+  checkLogin(): boolean {
+    if (localStorage.getItem('currentUser')) {
+      const currentUser = JSON.parse(localStorage.getItem('currentUser') as string);
+      if (currentUser && currentUser.role === ROLE.ADMIN) {
+        return this.loginAdminCheck = true;
+      } else if (currentUser && currentUser.role === ROLE.USER) {
+        return this.loginUserCheck = true,
+          this.userNameLogin = currentUser.firstName;
+      }
+    }
+    return this.loginAdminCheck = false,
+      this.loginUserCheck = false;
+  }
+
+
 
   checkDelivery(): void {
     let local = localStorage.getItem('deliveryType');
