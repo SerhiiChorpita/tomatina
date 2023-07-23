@@ -5,7 +5,6 @@ import { FeedbackComponent } from './pages/feedback/feedback.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { VacanciesComponent } from './pages/vacancies/vacancies.component';
 import { AuthGuard } from './shared/guards/auth/auth.guard';
-import { AuthDialogComponent } from './components/auth-dialog/auth-dialog.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -39,7 +38,11 @@ const routes: Routes = [
   },
   {
     path: 'auth',
-    loadChildren: () => import('./pages/authorization/authorization-routing.module').then(m => m.AuthorizationRoutingModule)
+    loadChildren: ()=>import('./components/auth-dialog/auth-dialog.module').then(m=>m.AuthDialogModule)
+  },
+  {
+    path: 'admin-auth',
+    loadChildren: ()=>import('./pages/authorization/authorization.module').then(m=>m.AuthorizationModule)
   },
   {
     path: 'address',

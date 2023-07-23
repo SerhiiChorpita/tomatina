@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthorizationComponent } from './authorization.component';
+
+import {AuthDialogComponent} from "./auth-dialog.component";
 
 const routes: Routes = [
   {
     path: '',
-    component: AuthorizationComponent
-  }
-]
+    component: AuthDialogComponent
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AuthorizationRoutingModule { }
+export class AuthDialogRoutingModule { }

@@ -83,15 +83,15 @@ export class AuthDialogComponent implements OnInit {
     if (email !== 'admin@gmail.com') {
       this.login(email, password).then(() => {
         this.toastr.success('User successfully logined in');
-        this.dialogRef.close();
+        // this.dialogRef.close();
         this.router.navigate(['/account']);
       }).catch(e => {
         this.toastr.error(e.message);
       })
     } else {
-      this.toastr.error('Access for admin from /auth');
+      this.toastr.error('Access for admin from /admin-auth');
       this.authForm.reset();
-      this.dialogRef.close();
+      // this.dialogRef.close();
     }
   }
   async login(email: string, password: string): Promise<void> {
