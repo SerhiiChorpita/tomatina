@@ -28,12 +28,12 @@ export class ProductService {
     return docData(productDocumentReference, { idField: 'id' });
   }
 
-  updateFirebase(product: IProductResponse, id: string) {
+  updateFirebase(product: IProductResponse, id: string | number) {
     const productDocumentReference = doc(this.afs, `product/${id}`);
     return updateDoc(productDocumentReference, { ...product });
   }
 
-  deleteFirebase(id: string) {
+  deleteFirebase(id: string | number) {
     const productDocumentReference = doc(this.afs, `product/${id}`);
     return deleteDoc(productDocumentReference);
   }
